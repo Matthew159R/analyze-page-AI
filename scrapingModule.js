@@ -1,12 +1,9 @@
-// scrapingModule.js
-
 const cheerio = require('cheerio');
 // Retorna todas as tags 'p' do site
 const contentWebSite = async tagName => {
     const url = 'https://www.alura.com.br/artigos/o-que-e-json-web-tokens';
-    const url2 = 'https://www.youtube.com/watch?v=LXRU-Z36GEU';
     const contentWebSite = [];
-    await fetch(url2)
+    await fetch(url)
         .then(reponse => reponse.text())
         .then(html => {
             const $ = cheerio.load(html);

@@ -1,8 +1,21 @@
-// sendMessageToGPT.js
+let getApiKey;
+try {
+    getApiKey = require('./apiKey');
+}catch (e) {
+    console.error({
+        error: "API KEY",
+        message: 'Para usar o software você precisa de uma api key da openai. Não posso divulgar a minha. Você pode usar a sua ou entrar em contato comigo.'
+    });
+
+    process.exit(1); 
+}
 
 // Retorna uma reposta do chat gpt
 const sendMessageToChatGpt = async (userExpectation, contentWebSite) => {
-    const apiKeyChaGpt = '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';
+
+    const apiKeyChaGpt = getApiKey();
+
+
     const endpoint = "https://api.openai.com/v1/chat/completions";
     
     const content = `Você irá analisar o conteúdo de uma página web 
