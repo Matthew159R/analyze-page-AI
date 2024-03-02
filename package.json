@@ -1,0 +1,11 @@
+{
+  "name": "analyze-page-ai",
+  "version": "1.0.0",
+  "description": "Software que analisa uma página web com AI de resume o que aquela página quer passar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Batista Rocha",
+  "license": "ISC"
+}
